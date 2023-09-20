@@ -17,7 +17,7 @@ function Login() {
             axios.post(' https://ecartecommerce.onrender.com/api/auth/login',data).then((res)=>{
              
 
-
+              console.log(res.data,"res");
 
               if(res.data.loginfail){
                 if(res.data?.errors?.email){
