@@ -30,7 +30,7 @@ function Register() {
                 document.cookie = `jwt=${token}`;
                 localStorage.setItem("userId", JSON.stringify(data.user?._id));
                 navigate("/home");
-                console.log('/');
+                console.log('/login');
                 
               }
             })
