@@ -24,7 +24,7 @@ function Home() {
     const getProducts=()=>{
       try {
         
-        axios.get(`http://localhost:8000/api/auth/product/${currentPage}`, {
+        axios.get(`https://ecartecommerce.onrender.com/api/auth/product/${currentPage}`, {
   headers: {
     'Authorization': `Bearer ${token}`,
     'Content-Type': 'application/json',

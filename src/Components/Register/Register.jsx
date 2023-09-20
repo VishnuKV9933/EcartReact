@@ -14,7 +14,7 @@ function Register() {
     const onSubmit=async(data)=>{
         try {
          
-            axios.post(' http://localhost:8000/api/auth/register',data).then((res)=>{
+            axios.post(' https://ecartecommerce.onrender.com/api/auth/register',data).then((res)=>{
             
               if(!res.data.created){
                 if(res.data.errors){

@@ -14,7 +14,7 @@ function Login() {
     const onSubmit=async(data)=>{
         try {
        
-            axios.post(' http://localhost:8000/api/auth/login',data).then((res)=>{
+            axios.post(' https://ecartecommerce.onrender.com/api/auth/login',data).then((res)=>{
              
 
 
