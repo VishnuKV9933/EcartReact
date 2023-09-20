@@ -29,7 +29,7 @@ function Register() {
                 const token = res.data.token;
                 document.cookie = `jwt=${token}`;
                 localStorage.setItem("userId", JSON.stringify(data.user?._id));
-                navigate("/");
+                navigate("/home");
                 console.log('/');
                 
               }

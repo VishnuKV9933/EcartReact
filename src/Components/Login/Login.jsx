@@ -17,10 +17,10 @@ function Login() {
             axios.post(' https://ecartecommerce.onrender.com/api/auth/login',data).then((res)=>{
              
 
-              console.log(res.data,"res");
+            
 
               if(res.data.loginfail){
-                console.log("fail",'error');
+               
                 if(res.data?.errors?.email){
                   setError(res?.data?.errors?.email)
                     const errorTimer= setTimeout(() => {
@@ -42,7 +42,7 @@ function Login() {
                 document.cookie = `jwt=${token}`;
                 localStorage.setItem("userId", JSON.stringify(data.user?._id));
                 console.log("navigate");
-                navigate("/");
+                navigate("/home");
 
                
                 
