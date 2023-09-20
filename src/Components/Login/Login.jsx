@@ -20,6 +20,7 @@ function Login() {
               console.log(res.data,"res");
 
               if(res.data.loginfail){
+                console.log("fail",'error');
                 if(res.data?.errors?.email){
                   setError(res?.data?.errors?.email)
                     const errorTimer= setTimeout(() => {
@@ -37,9 +38,12 @@ function Login() {
               }else{
                
                 const token = res.data.token;
+                console.log(token);
                 document.cookie = `jwt=${token}`;
                 localStorage.setItem("userId", JSON.stringify(data.user?._id));
+                console.log("navigate");
                 navigate("/");
+
                
                 
               }
